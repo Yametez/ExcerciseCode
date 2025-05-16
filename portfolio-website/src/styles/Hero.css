@@ -1,0 +1,79 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f3f4f6; /* เปลี่ยนจากรูปภาพเป็นสีพื้นหลังชั่วคราว */
+    color: var(--text-color);
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 1rem 0;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  /* เพิ่ม CSS สำหรับรูปภาพ */
+  .profile-image-container {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile-image {
+    width: 350px;  /* ปรับขนาดตามต้องการ */
+    height: 350px; /* ปรับขนาดตามต้องการ */
+    border-radius: 70%; /* ทำให้รูปเป็นวงกลม */
+    object-fit: cover; /* รักษาอัตราส่วนของรูปภาพ */
+    border: 3px solid var(--primary-color); /* เพิ่มขอบ */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* เพิ่มเงา */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .profile-image {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .hero-content h1 {
+      font-size: 1.5rem;
+    }
+    
+    .hero-content h2 {
+      font-size: 1.3rem;
+    }
+    /* เพิ่ม max-width และ text-align: center; ให้ข้อความกระจายเต็มบรรทัด */
+    .edu-text {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1.3;
+        word-break: keep-all; /* ป้องกันตัดคำ */
+      }
+  }
