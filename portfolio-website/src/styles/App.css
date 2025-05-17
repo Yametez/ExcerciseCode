@@ -23,7 +23,7 @@
   }
   
   section {
-    padding: var(--section-padding);
+    --section-padding: 40px 0;
   }
   
   .container {
@@ -39,10 +39,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #f3f4f6;
+    background: #caeaee;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: var(--text-color);
   }
   
   .hero-content h1 {
@@ -91,4 +91,15 @@
     .hero-content h2 {
       font-size: 1.5rem;
     }
+  }
+
+  .section-box {
+    background: #A8DADC;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 1.5rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .about-section {
+    margin-top: 2.5rem; /* หรือปรับเป็น px ตามต้องการ เช่น 40px */
   }

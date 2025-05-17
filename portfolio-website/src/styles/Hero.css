@@ -1,79 +1,91 @@
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #f3f4f6; /* เปลี่ยนจากรูปภาพเป็นสีพื้นหลังชั่วคราว */
-    color: var(--text-color);
-  }
-  
-  .hero-content {
-    max-width: 800px;
-    padding: 0 20px;
-    display: flex;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Container ใหม่สำหรับจัดวางรูปและข้อความ */
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* ระยะห่างระหว่างรูปและข้อความ */
+}
+
+/* ส่วนรูปภาพ */
+.hero-image-section {
+  flex: 0 0 auto; /* ไม่ยืดหดตามขนาดหน้าจอ */
+}
+
+.profile-image {
+  width: 350px; /* ปรับขนาดตามต้องการ */
+  height: 350px;
+  object-fit: cover;
+  /* border: 4px solid var(--primary-color); */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* ส่วนข้อความ */
+.hero-text-section {
+  flex: 1; /* ให้ส่วนข้อความขยายเต็มพื้นที่ที่เหลือ */
+  text-align: left; /* จัดข้อความชิดซ้าย */
+}
+
+.hero-text-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.hero-text-section h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin: 1rem 0;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-container {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 2rem;
     text-align: center;
-    line-height: 1.4;
+    gap: 2rem;
   }
-  
-  .hero-content h2 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin: 1rem 0;
+
+  .hero-text-section {
+    text-align: center;
   }
-  
-  .hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-  
-  /* เพิ่ม CSS สำหรับรูปภาพ */
-  .profile-image-container {
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-  }
-  
+
   .profile-image {
-    width: 350px;  /* ปรับขนาดตามต้องการ */
-    height: 350px; /* ปรับขนาดตามต้องการ */
-    border-radius: 70%; /* ทำให้รูปเป็นวงกลม */
-    object-fit: cover; /* รักษาอัตราส่วนของรูปภาพ */
-    border: 3px solid var(--primary-color); /* เพิ่มขอบ */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* เพิ่มเงา */
+    width: 280px;
+    height: 280px;
   }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .profile-image {
-      width: 150px;
-      height: 150px;
-    }
-    
-    .hero-content h1 {
-      font-size: 1.5rem;
-    }
-    
-    .hero-content h2 {
-      font-size: 1.3rem;
-    }
-    /* เพิ่ม max-width และ text-align: center; ให้ข้อความกระจายเต็มบรรทัด */
-    .edu-text {
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-        line-height: 1.3;
-        word-break: keep-all; /* ป้องกันตัดคำ */
-      }
+}
+
+@media (max-width: 768px) {
+  .hero-text-section h1 {
+    font-size: 1.5rem;
   }
+
+  .hero-text-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 250px;
+  }
+}
